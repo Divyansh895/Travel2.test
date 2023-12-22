@@ -8,8 +8,8 @@
    
 
 </head>
-<audio autoplay loop volume="1.0">     
-    <source src="midnight.mp3" type="audio/mpeg"> 
+<audio autoplay loop>     
+    <source src="Credit_bg.mp3" type="audio/mpeg"> 
     Your browser does not support the audio element.  
   </audio>
 
@@ -17,13 +17,13 @@
   <div class="notification-card" id="notificationCard">
     <img id="song_thumbnail" src="song_thumbnail.png" alt="Song Thumbnail">
     <div>   
-      <p id="songName">Melody : Midnight City</p>  <br>
-      <p id="artistName">Tunesmith : M83<p>       
+      <p id="songName">Melody : Feeling</p>  <br>
+      <p id="artistName">Tunesmith : Pacific<p>       
     </div> 
   </div> 
 <body>
-<!-- partial:index.partial.html -->
-
+<!-- partial:index.partial.html --> 
+ 
 <!--loader-->
 
 <div class="loading">
@@ -41,27 +41,23 @@
 
 <div class='wrapper'>
   <div class="scrollable-content">
-  <div class='movie'>Yuva Tourism</div>
+  <div class='movie'>Odyssey Hub</div>
   <div class='job'>crafted by</div>   
   <div class='movie' style="font-weight: 800; color: #e6bf6b;">divyansh patel</div>
-  <div class='movie1' style="font-weight: 800; color: #6ba0e6;">kartvvya parmar</div>   
-  <div class='movie1' style="font-weight: 800; color: #FFF;">VIII-A</div>
-  <div class='movie1' style="font-weight: 800; color: #FFF;">School Code</div> 
-  <div class='movie1' style="font-weight: 800; color: #FFF;">M-2315</div> 
   <hr>  <br>  
   <!--Photos-->
   <div class='job'>Images by</div> 
-  <div class='name'>Roman Pohorecki: <a href="https://www.pexels.com/photo/green-pine-trees-on-mountain-beside-the-body-of-water-15379/ " target="_blank">Pexels</a> 
+  <div class='name'>Roman Pohorecki: on <a href="https://www.pexels.com/photo/green-pine-trees-on-mountain-beside-the-body-of-water-15379/ " target="_blank">Pexels</a> 
   </div>
-  <div class='name'>Chait Goli: <a href="https://www.pexels.com/photo/photo-of-tower-bridge-during-dawn-1796706/" target="_blank">Pexels</a> 
+  <div class='name'>Chait Goli: on <a href="https://www.pexels.com/photo/photo-of-tower-bridge-during-dawn-1796706/" target="_blank">Pexels</a> 
   </div> 
-  <div class='name'>Davi Pimentel: <a href="https://www.pexels.com/photo/colosseum-rome-italy-2064827/" target="_blank">Pexels</a> 
+  <div class='name'>Davi Pimentel: on <a href="https://www.pexels.com/photo/colosseum-rome-italy-2064827/" target="_blank">Pexels</a> 
   </div>
-  <div class='name'>Donatello Trisolino: <a href="https://www.pexels.com/photo/motorboats-in-the-river-2351439/" target="_blank">Pexels</a> 
+  <div class='name'>Donatello Trisolino: on <a href="https://www.pexels.com/photo/motorboats-in-the-river-2351439/" target="_blank">Pexels</a> 
   </div>
-  <div class='name'>josiah farrow: <a href="https://www.pexels.com/photo/photo-of-falls-during-daytime-3686883/" target="_blank">Pexels</a> 
+  <div class='name'>josiah farrow: on <a href="https://www.pexels.com/photo/photo-of-falls-during-daytime-3686883/" target="_blank">Pexels</a> 
   </div>
-  <div class='name'>Tomáš Malík: <a href="https://www.pexels.com/photo/mt-fuji-3408353/" target="_blank">Pexels</a>
+  <div class='name'>Tomáš Malík: on <a href="https://www.pexels.com/photo/mt-fuji-3408353/" target="_blank">Pexels</a>
   </div>
   <div class='name'>Aleksandar Pasaric: on <a href="https://www.pexels.com/photo/people-walking-on-the-street-2506923/" target="_blank">Pexels</a>
   </div>
@@ -223,15 +219,17 @@
 </div>
 </div> 
 
-<div class="goback-button">
-  <button onclick="window.location.href='index.html'" class="custom-btn btn-5" id="goback-button"><span>Return</span></button> 
-</div>
+<button id="return" onclick="navigateTo('main.html')">Home</button> 
+
+
   
- 
 </div>
 
 <!-- partial -->
 <script>
+  function navigateTo(url) {
+      window.location.href = url;
+    }
 function createDuplicateCredits() {
             const wrapper = document.querySelector('.wrapper');
             const originalCredits = wrapper.innerHTML;
@@ -305,8 +303,8 @@ document.addEventListener("DOMContentLoaded", function() {
 setTimeout(function() {
   var loaderWrapper = document.querySelector(".loading");  
   loaderWrapper.style.display = "none";
-}, 4000); 
-});
+}, 1500); 
+}); 
  
 </script>   
 
@@ -373,81 +371,31 @@ body {
   } 
 }
 
-.goback-button {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-}
+button{
+      width: fit-content;
+      background-color: rgba(0,0,0,0.1);
+      color: white;
+      border: 2px solid white;
+      border-radius: 0.25rem;
+      padding: 0.75rem;
+      cursor: pointer;
+      position: fixed;
+      bottom: 20px;
+      margin: 20px;
+      transition: all 0.5s;
+      font-size: 1rem; 
+    } 
+
+    button:hover{
+      box-shadow: 5px 5px 5px rgb(0, 255, 234);
+      font-size: 20px;
+    }
 
 
-button {
-  margin: 20px;
-}
-.custom-btn {
-  width: 130px;
-  height: 40px;
-  color: #fff;
-  border-radius: 5px;
-  padding: 10px 25px;
-  font-family: 'Lato', sans-serif;
-  font-weight: 500;
-  background: transparent;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  position: relative;
-  display: inline-block;
-   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-   7px 7px 20px 0px rgba(0,0,0,.1),
-   4px 4px 5px 0px rgba(0,0,0,.1);
-  outline: none;
-}
 
-
-/* 5 */
-.btn-5 {
-  width: 130px;
-  height: 40px;
-  line-height: 42px;
-  padding: 0;
-  border: none;
-  background: rgb(140, 0, 255);
-
-}
-.btn-5:hover {
-  color: #f0094a;
-  background: transparent;
-   box-shadow:none;
-}
-.btn-5:before,
-.btn-5:after{
-  content:'';
-  position:absolute;
-  top:0;
-  right:0;
-  height:2px;
-  width:0;
-  background: #f0094a;
-  box-shadow:
-   -1px -1px 5px 0px #fff,
-   7px 7px 20px 0px #0003,
-   4px 4px 5px 0px #0002;
-  transition:400ms ease all;
-}
-.btn-5:after{
-  right:inherit;
-  top:inherit;
-  left:0;
-  bottom:0;
-}
-.btn-5:hover:before,
-.btn-5:hover:after{
-  width:100%;
-  transition:800ms ease all;
-}
- 
 /*notification*/
 .notification-card {
-  border-radius: 15px; 
+  border-radius: 15px;  
   position: fixed;
   top: 20px;
   left: 20px;

@@ -90,19 +90,16 @@
   
 </div>
 <!-- partial -->
-<div class="goback-button">
-  <button onclick="window.location.href='index.html'" class="custom-btn btn-5" id="goback-button"><span>Return</span></button> 
-</div>
- 
-  <div class="book-button">  
-  <button onclick="window.location.href='trip.html'" class="custom-btn1 btn-51" id="book-button"><span>Book</span></button> 
-    </div>   
+<!-- partial --> 
+<button id="return" onclick="navigateTo('beaches1.html')">Home</button> 
+<button id="next" onclick="navigateTo('trip.html')">Book</button> 
+     
       <script>
-        document.getElementById("goback-button").addEventListener("click", function() {
-    window.history.back();
-  });
-  
-      </script>
+        function navigateTo(url) {
+      window.location.href = url;
+    }
+   
+      </script> 
 
 </body> 
 </html>

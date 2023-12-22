@@ -84,19 +84,18 @@
   
 </div> 
 <!-- partial -->
-<div class="goback-button">
-  <button onclick="window.location.href='index.html'" class="custom-btn btn-5" id="goback-button"><span>Return</span></button> 
-</div>
+
+<button id="return" onclick="navigateTo('city.html')">Home</button> 
+<button id="next" onclick="navigateTo('trip.html')">Book</button> 
  
-  <div class="book-button">  
-  <button onclick="window.location.href='trip.html'" class="custom-btn1 btn-51" id="book-button"><span>Book</span></button> 
     </div> 
       <script> 
-        document.getElementById("goback-button").addEventListener("click", function() {
-    window.history.back();
-  });
+   
 
 
+   function navigateTo(url) {
+      window.location.href = url;
+    } 
    //song card// 
    document.addEventListener("DOMContentLoaded", function() {
     var notificationCard = document.getElementById("notificationCard");
@@ -169,14 +168,14 @@ body{
  
 /* Section - Parallax */
 /**************************/
-#parallax-world-of-ugg .parallax-one {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url(barcelona.jpg); border-radius: 10px; background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: top center;}
-#parallax-world-of-ugg .parallax-two {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url(valencia.jpg); border-radius: 10px; background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: center center;}
-#parallax-world-of-ugg .parallax-three {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url(madrid.jpg); border-radius: 10px;background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: center center;}
+#parallax-world-of-ugg .parallax-one {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url(images/barcelona.jpg); border-radius: 10px; background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: top center;}
+#parallax-world-of-ugg .parallax-two {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url(images/valencia.jpg); border-radius: 10px; background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: center center;}
+#parallax-world-of-ugg .parallax-three {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url(images/madrid.jpg); border-radius: 10px;background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: center center;}
 
 /* Extras */
 /**************************/
 #parallax-world-of-ugg .line-break {border-bottom:1px solid black; width: 150px; margin:0 auto;}
-
+ 
 /* Media Queries */
 /**************************/
 @media screen and (max-width: 959px) and (min-width: 768px) {
@@ -193,150 +192,32 @@ body{
 }
 
 
-.goback-button {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-}
+
+button, #next {
+      width: fit-content;
+      background-color: rgba(0,0,0,0.1);
+      color: white;
+      border: 2px solid white;
+      border-radius: 0.25rem;
+      padding: 0.75rem;
+      cursor: pointer;
+      position: fixed;
+      bottom: 20px;
+      margin: 20px;
+      transition: all 0.5s;
+      font-size: 1rem; 
+    } 
+
+    button:hover, #next:hover {
+      box-shadow: 5px 5px 5px rgb(0, 255, 234);
+      font-size: 20px;
+    }
+
+    #next {
+      right: 20px;
+    }  
 
 
-button {
-  margin: 20px;
-}
-.custom-btn {
-  width: 130px;
-  height: 40px;
-  color: #fff;
-  border-radius: 5px;
-  padding: 10px 25px;
-  font-family: 'Lato', sans-serif;
-  font-weight: 500;
-  background: transparent;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  position: relative;
-  display: inline-block;
-   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-   7px 7px 20px 0px rgba(0,0,0,.1),
-   4px 4px 5px 0px rgba(0,0,0,.1);
-  outline: none;
-}
-
-
-/* 5 */
-.btn-5 {
-  width: 130px;
-  height: 40px;
-  line-height: 42px;
-  padding: 0;
-  border: none;
-  background: rgb(140, 0, 255);
-
-}
-.btn-5:hover {
-  color: #f0094a;
-  background: transparent;
-   box-shadow:none;
-}
-.btn-5:before,
-.btn-5:after{
-  content:'';
-  position:absolute;
-  top:0;
-  right:0;
-  height:2px;
-  width:0;
-  background: #f0094a;
-  box-shadow:
-   -1px -1px 5px 0px #fff,
-   7px 7px 20px 0px #0003,
-   4px 4px 5px 0px #0002;
-  transition:400ms ease all;
-}
-.btn-5:after{
-  right:inherit;
-  top:inherit;
-  left:0;
-  bottom:0;
-}
-.btn-5:hover:before,
-.btn-5:hover:after{
-  width:100%;
-  transition:800ms ease all;
-}
-
-
-
-.book-button {
-  position: fixed;
-  bottom: 20px;
-  right: 20px; /* Adjust the right property to move the button horizontally */
-  z-index: 9999;
-} 
-
-
-.custom-btn1 {
-  width: 130px;
-  height: 40px;
-  color: #fff;
-  border-radius: 5px;
-  padding: 10px 25px;
-  font-family: 'Lato', sans-serif;
-
-  font-weight: 500;
-  background: transparent;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  position: relative;
-  display: inline-block;
-   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-   7px 7px 20px 0px rgba(0,0,0,.1),
-   4px 4px 5px 0px rgba(0,0,0,.1);
-  outline: none;
-}
-
-
-/* 5 */
-.btn-51 {
-  width: 130px;
-  height: 40px;
-  line-height: 42px;
-  padding: 0;
-  border: none;
-  background: rgb(255, 145, 0);
-
-}
-.btn-51:hover {
-  color: #34bfd8;
-  background: transparent;
-   box-shadow:none;
-}
-.btn-51:before,
-.btn-51:after{
-  content:'';
-  position:absolute;
-  top:0;
-  right:0;
-  height:2px;
-  width:0;
-  background: #f0094a;
-  box-shadow:
-   -1px -1px 5px 0px #fff,
-   7px 7px 20px 0px #0003,
-   4px 4px 5px 0px #0002;
-  transition:400ms ease all;
-}
-.btn-51:after{
-  right:inherit;
-  top:inherit;
-  left:0;
-  bottom:0;
-}
-.btn-51:hover:before,
-.btn-51:hover:after{
-  width:100%;
-  transition:800ms ease all;
-}
 
 
 
